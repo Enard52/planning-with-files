@@ -115,7 +115,7 @@ class SkillFrontmatterTests(unittest.TestCase):
         import tempfile
 
         with tempfile.TemporaryDirectory() as tmpdir:
-            tmp_root = Path(tmpdir)
+            tmp_root = Path(tmpdir).resolve()
 
             # Hidden valid skill
             hidden_valid = tmp_root / ".agents" / "skills" / "planning-with-files" / "SKILL.md"
